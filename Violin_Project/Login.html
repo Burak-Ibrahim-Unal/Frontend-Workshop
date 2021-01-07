@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Burak Ibrahim Unal's Web Programming Project</title>
+
+    <!-- Responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap3.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="Login.css">
+    <script src="Login.js"></script>
+
+</head>
+<body>
+
+
+    <!-- NAVBAR start -->
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <img class="navbar-brand" src="photos/nav1.png" width="5%" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" aria-disabled="true"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Gallery.html"><i class="fas fa-camera"></i>Photo Gallery</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Contact.html"><i class="fas fa-comments"></i>Contact Us <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Login.html" > <i class="fas fa-sign-in-alt"></i>Log in</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Register.html"><i class="fas fa-user-plus"></i>Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAVBAR end -->
+
+
+    <!-- Main login page start-->
+        <div class="container">
+            <div class="row" style="margin-top:20px">
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <form role="form" name="LoginForm" onsubmit=" return validate()">
+                        <fieldset>
+                            <h2>Please Sign In</h2>
+                            <hr class="colorgraph">
+                            <div class="form-group">
+                                <input type="email" name="email" id="mail" class="form-control input-lg" placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" id="pass1" class="form-control input-lg" placeholder="Password">
+                            </div>
+                        <a href="" class="btn btn-link pull-right">Forgot Password?</a>
+                    </span>
+                            <hr class="colorgraph">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <a href="Register.html" class="btn btn-lg btn-primary btn-block">Register</a>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!-- Main login page end-->
+
+    <!-- Jquery first and than bootstrap -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.min.js"> </script>
+    <script src="js/bootstrap3.js"> </script>
+</body>
+</html>
