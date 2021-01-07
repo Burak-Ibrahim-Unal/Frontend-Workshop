@@ -1,0 +1,13 @@
+.aw-zoom {
+	position: relative;
+	transition: all 0.5s ease-in-out;
+	margin: 30px auto;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.aw-zoom:hover {
+	z-index: 2;
+	transform: scale(1.5);
+}

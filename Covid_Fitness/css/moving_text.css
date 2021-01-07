@@ -1,0 +1,19 @@
+/* Burak yazısını css ve @web taglarıyla kaydırıyorum */
+.typewriter {
+	font-family: monospace;
+	overflow: hidden; /* Animasyona kadar içerik görünmeyecek */
+	white-space: nowrap; /* Yazı tek hatta kalacak */
+	margin: 0 auto;
+	letter-spacing: 0.15em;
+	animation: typing 2.5s infinite, infinite 0.5s step-end infinite;
+}
+
+/* Yazı efekti sağdan sola */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
