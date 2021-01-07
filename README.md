@@ -1,1 +1,1 @@
-This is an School Projects
+This is School Projects
