@@ -5,7 +5,7 @@ I used Html,Css,Bootstrap and Javascript at Violin Project
 
 -----------------------------------------------------------
 
-Entry folder keeps some usefull codes and informations
+Entry folder keeps some sample codes and useful informations(Mostly Angular Codes)
 
 -----------------------------------------------------------
 
