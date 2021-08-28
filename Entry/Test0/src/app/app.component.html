@@ -1,0 +1,22 @@
+<!-- Hello {{user}} Wellcome to {{title}} page
+{{product2.productId}} {{product2.productName}}
+<ul>
+  <li *ngFor="let product of products">{{product.productName}} -- {{product.unitPrice}} TL</li>
+</ul> -->
+
+<div class="container">
+  <app-navi></app-navi>
+  <div class="row">
+    <div class="col-md-3">
+      <app-category></app-category>
+    </div>
+    <div class="col-md-9">
+      <app-product></app-product>
+    </div>
+  </div>
+
+
+
+
+  <router-outlet> </router-outlet>
+</div>
