@@ -1,6 +1,6 @@
 # Northwind
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12. Dont forget to run "npm install" command in your terminal.
 
 ## Development server
 
