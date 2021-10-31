@@ -1,8 +1,20 @@
 <table class="table ">
-  <tr *ngFor="let product of products" >
-    <td>Id:{{product.productId}}</td>
-    <td>Name:{{product.productName}}</td>
-    <td>Category:{{product.categoryId}}</td>
-    <td>Price:{{product.unitPrice}}</td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Category</th>
+      <th scope="col">Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.productId}}</td>
+      <td>{{product.productName}}</td>
+      <td>{{product.unitPrice}}</td>
+      <td>Category:{{product.categoryId}}</td>
+      <td>{{product.unitsInStock}}</td>
+    </tr>
+  </tbody>
 </table>
