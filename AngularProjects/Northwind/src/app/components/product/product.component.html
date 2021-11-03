@@ -20,6 +20,7 @@
       <th scope="col">Price + Taxes</th>
       <th scope="col">Category</th>
       <th scope="col">Stock</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -30,6 +31,7 @@
       <td>{{ product.unitPrice | vatAdded:10 | currency }}</td>
       <td>{{ product.categoryId }}</td>
       <td>{{ product.unitsInStock }}</td>
+      <td><button (click)="addToCart(product)" type="button" class="btn btn-success">Add Cart</button></td>
     </tr>
   </tbody>
 </table>
