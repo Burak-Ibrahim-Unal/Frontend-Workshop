@@ -11,11 +11,12 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductComponent implements OnInit {
   products: Product[] = [];
   dataLoaded = false;
+  filterProduct = "";
 
   constructor(
     private productService: ProductService,
     private activedRoute: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.activedRoute.params.subscribe((params) => {
