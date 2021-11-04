@@ -17,11 +17,19 @@ export class CartService {
         } else {
             let cartItem = new CartItem();
             cartItem.product = product;
+            cartItem.quantity = 1;
             CartItems.push(cartItem);
         }
     }
+
     cartList(): CartItem[] {
         return CartItems;
+    }
+
+    removeFromCart(product: Product) {
+        let item: CartItem = CartItems.find(p => p.product.productId === product.productId);
+        CartItems.splice(CartItems.indexOf(item), 1);
+
     }
 
 }
