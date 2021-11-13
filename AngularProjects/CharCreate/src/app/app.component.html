@@ -1,0 +1,58 @@
+<div id="hi-alien">
+  {{title}}
+</div>
+<div>
+  <div id="toystoy-alien">
+    <div [style.background-color]="color" id="antenna"></div>
+    <div [style.background-color]="colorHead" id="head">
+      <div [style.background-color]="colorEyes" class="ear" id="left-ear"></div>
+      <div [style.background-color]="colorEyes" class="ear" id="right-ear"></div>
+      <div id="eyes">
+        <div [style.background-color]="colorEyes" class="eye"></div>
+        <div [style.background-color]="colorEyes" class="eye"></div>
+      </div>
+      <div class="mouth"></div>
+    </div>
+    <div [style.background-color]="colorBody" id="alien-body">
+      <div [style.background-color]="colorArms" class="arm" id="left-arm">
+        <div class="hands"></div>
+      </div>
+      <div [style.background-color]="colorArms" class="arm" id="right-arm">
+        <div class="hands"></div>
+      </div>
+
+      <div [style.background-color]="colorLegs" id="legs"></div>
+      <div id="left-foot"></div>
+      <div id="right-foot"></div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="container">
+    <div class="bars otherBars">
+      <label>Strength : {{strength}}</label>
+      <mat-progress-bar [value]="strength" mode="determinate">Strength</mat-progress-bar>
+    </div>
+    <div class="bars otherBars">
+      <label>Dexterity : {{dexterity}}</label>
+      <mat-progress-bar [value]="dexterity" mode="determinate">Dexterity</mat-progress-bar>
+    </div>
+    <div class="bars otherBars">
+      <label>Intelligence : {{intelligence}}</label>
+      <mat-progress-bar [value]="intelligence" mode="determinate">intelligence</mat-progress-bar>
+    </div>
+    <div class="bars otherBars">
+      <label>Vitality : {{vitality}}</label>
+      <mat-progress-bar [value]="vitality" mode="determinate">vitality</mat-progress-bar>
+    </div>
+    <div class="bars otherBars">
+      <label>Agility : {{agility}}</label>
+      <mat-progress-bar [value]="agility" mode="determinate">agility</mat-progress-bar>
+    </div>
+  </div>
+</div>
+
+<div class="createButton">
+  <button class="btn btn-primary" type="button" (click)="getRandomColor('red'); getRandomPower();">Create</button>
+  <button class="btn btn-success" type="button">Onayla</button>
+</div>
