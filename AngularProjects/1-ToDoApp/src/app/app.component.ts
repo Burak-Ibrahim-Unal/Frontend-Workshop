@@ -31,4 +31,8 @@ export class AppComponent {
       alert("Please enter a task");
     }
   }
+
+  displayCount() {
+    return this.user.toDoList.filter(todoitem => todoitem.action).length;
+  }
 }
