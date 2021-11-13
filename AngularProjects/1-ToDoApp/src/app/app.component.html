@@ -54,11 +54,20 @@
                 No
               </span>
             </td> -->
-              <td *ngIf="item.action; else noTemplate">
+              <!-- <td *ngIf="item.action; else noTemplate">
                 Yes
               </td>
               <ng-template #noTemplate>
                 No
+              </ng-template> -->
+              <td *ngIf="item.action; then yesTemplate else noTemplate">
+                Not shown area
+              </td>
+              <ng-template #noTemplate>
+                <td>Not Started</td>
+              </ng-template>
+              <ng-template #yesTemplate>
+                <td>Done</td>
               </ng-template>
             </tr>
           </tbody>
