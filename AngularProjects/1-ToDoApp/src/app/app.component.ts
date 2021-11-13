@@ -26,6 +26,8 @@ export class AppComponent {
   addItem(value: String) {
     if (value != '') {
       this.user.toDoList.push(new ToDoItem(value, false));
+    } else{
+      alert("Please enter a task");
     }
   }
 }
