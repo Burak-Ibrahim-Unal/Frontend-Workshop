@@ -19,14 +19,15 @@ export class AppComponent {
     if (this.allDisplayed) {
       return this.user.toDoList;
     }
-    return this.user.toDoList.filter((toDoList) => !toDoList.action);
+    //return this.user.toDoList.filter((toDoList) => !toDoList.action);
+    return this.user.toDoList.filter((toDoList) => toDoList.action == false);
 
   }
 
   addItem(value: String) {
     if (value != '') {
       this.user.toDoList.push(new ToDoItem(value, false));
-    } else{
+    } else {
       alert("Please enter a task");
     }
   }
