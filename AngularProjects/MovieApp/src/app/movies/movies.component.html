@@ -1,65 +1,36 @@
-<div class="card mb-3">
-  <div class="row">
-    <div class="col-md-3">
-      <img src="../../assets/img/cruella.jpg" class="img-fluid rounded-start" alt="">
-    </div>
-    <div class="col-md-9">
-      <div class="card-body">
-        <h3 class="card-title">Cruella</h3>
-        <p class="card-text">Before she becomes Cruella de Vil, teenage Estella has a dream. She wishes to become a
-          fashion designer, having been gifted with talent, innovation, and ambition all in equal measures. But life
-          seems intent on making sure her dreams never come true. Having wound up penniless and orphaned in London at
-          12, 10 years later Estella runs wild through the city streets with her best friends and
-          partners-in-(petty)-crime, Horace and Jasper, two amateur thieves. When a chance encounter vaults Estella into
-          the world of the young rich and famous, however, she begins to question the existence she's built for herself
-          in London and wonders whether she might, indeed, be destined for more after all.</p>
-        <button class="btn btn-sm btn-outline-primary">Movie Details</button>
-      </div>
-    </div>
+<!-- <div *ngIf="movies.length>0; else no_Movies"> -->
+<div *ngIf="movies.length>0; else no_Movies">
+  <h2>{{myMovieListTitle}}</h2>
+  <div class="alert alert-warning">
+    Total {{movies.length}} movies found
   </div>
+
+  <ng-template [ngTemplateOutlet]="myMovieFullList"></ng-template>
 </div>
 
-<div class="card mb-3">
-  <div class="row">
-    <div class="col-md-3">
-      <img src="../../assets/img/hobbit.jpg" class="img-fluid rounded-start" alt="">
-    </div>
-    <div class="col-md-9">
-      <div class="card-body">
-        <h3 class="card-title">Hobbit</h3>
-        <p class="card-text">Bilbo Baggins is swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the
-          fearsome dragon Smaug. Approached out of the blue by the wizard Gandalf the Grey, Bilbo finds himself joining
-          a company of thirteen dwarves led by the legendary warrior, Thorin Oakenshield. Their journey will take them
-          into the Wild; through treacherous lands swarming with Goblins and Orcs, deadly Wargs and Giant Spiders,
-          Shapeshifters and Sorcerers. Although their goal lies to the East and the wastelands of the Lonely Mountain
-          first they must escape the goblin tunnels, where Bilbo meets the creature that will change his life forever
-          ... Gollum. Here, alone with Gollum, on the shores of an underground lake, the unassuming Bilbo Baggins not
-          only discovers depths of guile and courage that surprise even him, he also gains possession of Gollum's
-          "precious" ring that holds unexpected and useful qualities ... A simple, gold ring that is tied to the fate of
-          all Middle-earth in ways Bilbo cannot begin to know.</p>
-        <button class="btn btn-sm btn-outline-primary">Movie Details</button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="card mb-3">
-  <div class="row">
-    <div class="col-md-3">
-      <img src="../../assets/img/lucy.jpg" class="img-fluid rounded-start" alt="">
-    </div>
-    <div class="col-md-9">
-      <div class="card-body">
-        <h3 class="card-title">Lucy</h3>
-        <p class="card-text">It was supposed to be a simple job. All Lucy had to do was deliver a mysterious briefcase
-          to Mr. Jang. But immediately Lucy is caught up in a nightmarish deal where she is captured and turned into a
-          drug mule for a new and powerful synthetic drug. When the bag she is carrying inside of her stomach leaks,
-          Lucy's body undergoes unimaginable changes that begins to unlock her mind's full potential. With her new-found
-          powers, Lucy turns into a merciless warrior intent on getting back at her captors. She receives invaluable
-          help from Professor Norman, the leading authority on the human mind, and French police captain Pierre Del Rio.
-        </p>
-        <button class="btn btn-sm btn-outline-primary">Movie Details</button>
+
+
+<ng-template #myMovieFullList>
+  <div class="card mb-3" *ngFor="let movie of movies; let i=index">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="../../assets/img/{{movie.imgUrl}}" class="img-fluid rounded-start" alt="">
+      </div>
+      <div class="col-md-9">
+        <div class="card-body">
+          <h3 class="card-title">{{movie.title}}</h3>
+          <p class="card-text">{{movie.desc}}</p>
+          <button class="btn btn-sm btn-outline-primary">Movie Details</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</ng-template>
+
+
+<ng-template #no_Movies class="alert alert-danger">
+  <div class="alert alert-danger">
+    {{noneMovieTitle}}
+  </div>
+</ng-template>
