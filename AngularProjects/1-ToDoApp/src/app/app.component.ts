@@ -25,9 +25,10 @@ export class AppComponent {
 
   }
 
-  addItem(value: String) {
-    if (value != '') {
-      this.user.toDoList.push(new ToDoItem(value, false));
+  addItem() {
+    if (this.inputText != '') {
+      this.user.toDoList.push(new ToDoItem(this.inputText, false));
+      this.inputText = "";
     } else {
       alert("Please enter a task");
     }
@@ -35,5 +36,13 @@ export class AppComponent {
 
   displayCount() {
     return this.user.toDoList.filter(todoitem => todoitem.action).length;
+  }
+
+  getButtonClasses() {
+    return {
+      'disabled': this.inputText.length == 0,
+      'btn-secondary': this.inputText.length == 0,
+      'btn-success': this.inputText.length > 0
+    }
   }
 }

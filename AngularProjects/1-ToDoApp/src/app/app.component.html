@@ -6,10 +6,13 @@
       </h3>
 
       <div class="input-group">
-        <input #toDoText type="text" [(ngModel)]="inputText" class="form-control" (keyup.enter)="addItem(toDoText.value); toDoText.value='';">
+        <input #toDoText type="text" [(ngModel)]="inputText" class="form-control" (keyup.enter)="addItem()">
         <div class="input-group-append">
-          <button [class]="{'disabled': inputText.length == 0}" (click)="addItem(toDoText.value); toDoText.value='';"
-            class="btn btn-primary">Add
+          <button [class]="{
+            'disabled': inputText.length == 0,
+            'btn-secondary': inputText.length == 0,
+            'btn-success': inputText.length > 0
+          }" (click)="addItem()" class="btn btn-primary">Add
           </button>
         </div>
       </div>
