@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   user = new Model();
   allDisplayed = false;
+  inputText: string = "";
 
   getName() {
     return this.user.name;

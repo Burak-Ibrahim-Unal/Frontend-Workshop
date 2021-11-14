@@ -6,9 +6,11 @@
       </h3>
 
       <div class="input-group">
-        <input #toDoText type="text" class="form-control" (keyup.enter)="addItem(toDoText.value); toDoText.value='';">
+        <input #toDoText type="text" [(ngModel)]="inputText" class="form-control" (keyup.enter)="addItem(toDoText.value); toDoText.value='';">
         <div class="input-group-append">
-          <button (click)="addItem(toDoText.value); toDoText.value='';" class="btn btn-primary">Add</button>
+          <button [class]="{'disabled': inputText.length == 0}" (click)="addItem(toDoText.value); toDoText.value='';"
+            class="btn btn-primary">Add
+          </button>
         </div>
       </div>
       <div class="container">
