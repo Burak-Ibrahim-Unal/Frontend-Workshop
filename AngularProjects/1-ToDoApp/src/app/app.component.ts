@@ -12,6 +12,10 @@ export class AppComponent {
   allDisplayed = false;
   inputText: string = "";
 
+  constructor() {
+    this.user.toDoList = this.getItemsFromLocalStorage();
+  }
+
   getName() {
     return this.user.name;
   }
@@ -27,11 +31,37 @@ export class AppComponent {
 
   addItem() {
     if (this.inputText != '') {
-      this.user.toDoList.push(new ToDoItem(this.inputText, false));
+      let data = new ToDoItem(this.inputText, false);
+      this.user.toDoList.push(data);
+
+      let dataItems = this.getItemsFromLocalStorage();
+      dataItems.push(data);
+      localStorage.setItem("items", JSON.stringify(dataItems));
       this.inputText = "";
     } else {
       alert("Please enter a task");
     }
+  }
+
+  removeItem(item: ToDoItem) {
+    let items = this.getItemsFromLocalStorage();
+    localStorage.clear();
+    items.forEach(i => {
+      if (i.description == item.description) {
+        items.splice(items.indexOf(i), 1);
+        console.log(item.description);
+      }
+    });
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+
+  getItemsFromLocalStorage() {
+    let items: ToDoItem[] = [];
+    let lsItems = localStorage.getItem("items");
+    if (lsItems != null) {
+      items = JSON.parse(lsItems);
+    }
+    return items;
   }
 
   displayCount() {
@@ -44,5 +74,16 @@ export class AppComponent {
       'btn-secondary': this.inputText.length == 0,
       'btn-success': this.inputText.length > 0
     }
+  }
+
+  onLocalStorageChanged(item: ToDoItem) {
+    let items = this.getItemsFromLocalStorage();
+    localStorage.clear();
+    items.forEach(i => {
+      if (i.description == item.description) {
+        i.action = item.action;
+      }
+    });
+    localStorage.setItem("items", JSON.stringify(items));
   }
 }

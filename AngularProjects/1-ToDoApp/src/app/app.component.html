@@ -8,11 +8,7 @@
       <div class="input-group">
         <input #toDoText type="text" [(ngModel)]="inputText" class="form-control" (keyup.enter)="addItem()">
         <div class="input-group-append">
-          <button [class]="{
-            'disabled': inputText.length == 0,
-            'btn-secondary': inputText.length == 0,
-            'btn-success': inputText.length > 0
-          }" (click)="addItem()" class="btn btn-primary">Add
+          <button [class]="getButtonClasses()" (click)="addItem()" class="btn btn-primary">Add
           </button>
         </div>
       </div>
@@ -38,6 +34,7 @@
               <th>Description</th>
               <th>Action</th>
               <th>Status</th>
+              <th>Process</th>
             </tr>
           </thead>
           <tbody>
@@ -47,7 +44,7 @@
               <td>{{ i+1 }}</td>
               <td>{{ item.description }}</td>
               <td>
-                <input type="checkbox" [(ngModel)]="item.action" name="" id="">
+                <input type="checkbox" (change)="onLocalStorageChanged(item)" [(ngModel)]="item.action" name="" id="">
               </td>
               <!-- <td>
               <div *ngIf="item.action">Done</div>
@@ -76,6 +73,9 @@
               <ng-template #yesTemplate>
                 <td>Done</td>
               </ng-template>
+              <td class="bg-danger">
+                <button (click)="removeItem(item)" class="btn btn-danger">Remove</button>
+              </td>
             </tr>
           </tbody>
         </table>
