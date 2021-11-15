@@ -9,6 +9,7 @@ import { Movie } from 'src/app/models/movie';
 })
 export class MoviesComponent implements OnInit {
   movies: Movie[];
+  filteredMovies: Movie[];
   popularMovies: Movie[];
   movieRepository: MovieRepository;
   myMovieListTitle: string = "My Movie List";
@@ -16,14 +17,18 @@ export class MoviesComponent implements OnInit {
   filterText: string = "";
 
 
-constructor() {
-  this.movieRepository = new MovieRepository();
-  this.movies = this.movieRepository.getMovies();
-  this.popularMovies = this.movieRepository.getPopularMovies();
-}
+  constructor() {
+    this.movieRepository = new MovieRepository();
+    this.movies = this.movieRepository.getMovies();
+    this.popularMovies = this.movieRepository.getPopularMovies();
+    this.filteredMovies = this.movies;
+  }
 
-ngOnInit(): void {
-}
+  ngOnInit(): void {
+  }
 
+  onInputChange() {
+    this.filteredMovies = this.filterText ? this.movies.filter(m => m.title.includes(this.filterText) || m.desc.includes(this.filterText)) : this.movies;
+  }
 
 }

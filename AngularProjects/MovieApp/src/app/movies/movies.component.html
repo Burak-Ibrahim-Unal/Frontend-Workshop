@@ -2,11 +2,13 @@
 <div *ngIf="movies.length>0; else no_Movies">
   <h2>{{myMovieListTitle}}</h2>
   <div class="alert alert-warning">
-    Total {{movies.length}} movies found
+    Total {{filteredMovies.length}} movies found
   </div>
 
   <div class="mb-3">
-    <input type="text" class="form-control" [(ngModel)]="filterText" placeholder="Search Movie">
+    <!-- <input type="text" class="form-control" [(ngModel)]="filterText" placeholder="Search Movie"> -->
+    <input type="text" class="form-control" [(ngModel)]="filterText" (ngModelChange)="onInputChange()"
+      placeholder="Search Movie">
     <small class="text-muted" *ngIf="filterText">Looking for {{filterText}}</small>
   </div>
 
@@ -23,6 +25,7 @@
 
 
 <ng-template #myMovieFullList>
+  <!-- <div class="card mb-3" *ngFor="let movie of movies | movieFilter:filterText; let i=index"> -->
   <div class="card mb-3" *ngFor="let movie of movies | movieFilter:filterText; let i=index">
     <div class="row">
       <div class="col-md-2">
