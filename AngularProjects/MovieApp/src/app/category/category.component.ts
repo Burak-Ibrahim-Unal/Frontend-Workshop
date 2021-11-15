@@ -1,5 +1,5 @@
-import { CategoryRepository } from './../../models/categoryRepository';
-import { Category } from './../../models/category';
+import { CategoryRepository } from '../models/categoryRepository';
+import { Category } from '../models/category';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -1,6 +1,6 @@
-import { MovieRepository } from './../../models/movieRepository';
+import { MovieRepository } from '../models/movieRepository';
 import { Component, OnInit } from '@angular/core';
-import { Movie } from 'src/models/movie';
+import { Movie } from 'src/app/models/movie';
 
 @Component({
   selector: 'app-movies',

@@ -25,8 +25,9 @@
       </div>
       <div class="col-md-10">
         <div class="card-body">
-          <h3 class="card-title">{{movie.title}}</h3>
-          <p class="card-text">{{movie.desc}}</p>
+          <h3 class="card-title">{{movie.title | uppercase}}</h3>
+          <p class="card-text">{{movie.releaseDate | date:'dd/MM/y'}}</p>
+          <p class="card-text">{{movie.desc | descSummary:50}}</p>
           <button class="btn btn-sm btn-outline-primary">Movie Details</button>
         </div>
       </div>
@@ -44,8 +45,8 @@
       <div class="card h-100">
         <img src="../../assets/img/{{movie.imgUrl}}" class="card-img-top img-fluid rounded-start" alt="">
         <div class="card-body">
-          <h3 class="card-title">{{movie.title}}</h3>
-          <p class="card-text">{{movie.desc}}</p>
+          <h3 class="card-title">{{movie.title | uppercase}}</h3>
+          <p class="card-text">{{movie.desc | descSummary}}</p>
         </div>
       </div>
     </div>
