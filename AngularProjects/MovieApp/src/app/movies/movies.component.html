@@ -37,6 +37,8 @@
           <p class="card-text">{{movie.releaseDate | date:'dd/MM/y'}}</p>
           <p class="card-text">{{movie.desc | descSummary:50}}</p>
           <button class="btn btn-sm btn-outline-primary">Movie Details</button>
+          <button (click)="addToList($event,movie)" class="btn btn-sm btn-outline-success ms-1">Add List</button>
+
         </div>
       </div>
     </div>
