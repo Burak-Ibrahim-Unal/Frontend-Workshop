@@ -6,7 +6,8 @@
   </div>
 
   <ng-template [ngTemplateOutlet]="myMovieFullList"></ng-template>
-  <ng-template [ngTemplateOutlet]="myMovieFullList2" [ngTemplateOutletContext]="{no_Movies: movieRepository}">
+  <ng-template [ngTemplateOutlet]="myMovieFullList2"
+    [ngTemplateOutletContext]="{no_Movies: movieRepository.getMovies()}">
   </ng-template>
 </div>
 
