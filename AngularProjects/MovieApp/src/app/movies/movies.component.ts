@@ -13,15 +13,17 @@ export class MoviesComponent implements OnInit {
   movieRepository: MovieRepository;
   myMovieListTitle: string = "My Movie List";
   noneMovieTitle: string = "Movies not found";
+  filterText: string = "";
 
-  constructor() {
-    this.movieRepository = new MovieRepository();
-    this.movies = this.movieRepository.getMovies();
-    this.popularMovies = this.movieRepository.getPopularMovies();
-  }
 
-  ngOnInit(): void {
-  }
+constructor() {
+  this.movieRepository = new MovieRepository();
+  this.movies = this.movieRepository.getMovies();
+  this.popularMovies = this.movieRepository.getPopularMovies();
+}
+
+ngOnInit(): void {
+}
 
 
 }

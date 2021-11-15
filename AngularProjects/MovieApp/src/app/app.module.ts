@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import { MovieComponent } from './movies/movie/movie.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { FooterComponent } from './footer/footer.component';
 import { DescSummaryPipe } from './Pipes/desc-summary.pipe';
+import { MovieFilterPipe } from './Pipes/movie-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { DescSummaryPipe } from './Pipes/desc-summary.pipe';
     MovieComponent,
     MovieDetailsComponent,
     FooterComponent,
-    DescSummaryPipe
+    DescSummaryPipe,
+    MovieFilterPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

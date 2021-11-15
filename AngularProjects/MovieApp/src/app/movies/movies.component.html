@@ -5,6 +5,11 @@
     Total {{movies.length}} movies found
   </div>
 
+  <div class="mb-3">
+    <input type="text" class="form-control" [(ngModel)]="filterText" placeholder="Search Movie">
+    <small class="text-muted" *ngIf="filterText">Looking for {{filterText}}</small>
+  </div>
+
   <ng-template [ngTemplateOutlet]="myMovieFullList2" [ngTemplateOutletContext]="{movies: popularMovies}">
   </ng-template>
   <!-- <ng-template [ngTemplateOutlet]="myMovieFullList2"
@@ -18,7 +23,7 @@
 
 
 <ng-template #myMovieFullList>
-  <div class="card mb-3" *ngFor="let movie of movies; let i=index">
+  <div class="card mb-3" *ngFor="let movie of movies | movieFilter:filterText; let i=index">
     <div class="row">
       <div class="col-md-2">
         <img src="../../assets/img/{{movie.imgUrl}}" class="img-fluid rounded-start" alt="">
