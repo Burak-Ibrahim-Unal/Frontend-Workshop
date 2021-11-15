@@ -6,12 +6,32 @@
   </div>
 
   <ng-template [ngTemplateOutlet]="myMovieFullList"></ng-template>
+  <ng-template [ngTemplateOutlet]="myMovieFullList2" [ngTemplateOutletContext]="{no_Movies: movieRepository}">
+  </ng-template>
 </div>
 
 
 
 
 <ng-template #myMovieFullList>
+  <div class="card mb-3" *ngFor="let movie of movies; let i=index">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="../../assets/img/{{movie.imgUrl}}" class="img-fluid rounded-start" alt="">
+      </div>
+      <div class="col-md-9">
+        <div class="card-body">
+          <h3 class="card-title">{{movie.title}}</h3>
+          <p class="card-text">{{movie.desc}}</p>
+          <button class="btn btn-sm btn-outline-primary">Movie Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+<ng-template #myMovieFullList2 let-movies="no_Movies">
   <div class="card mb-3" *ngFor="let movie of movies; let i=index">
     <div class="row">
       <div class="col-md-3">

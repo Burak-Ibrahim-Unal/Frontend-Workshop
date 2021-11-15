@@ -8,12 +8,12 @@ import { Movie } from 'src/models/movie';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  movies: Movie[] = [];
+  movies: Movie[];
+  movieRepository: MovieRepository;
   myMovieListTitle: string = "My Movie List";
   noneMovieTitle: string = "Movies not found";
 
   constructor() {
-    this.movies = new MovieRepository().getMovies();
   }
 
   ngOnInit(): void {
