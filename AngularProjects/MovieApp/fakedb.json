@@ -1,0 +1,49 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Movie title 1",
+      "desc": "Movie 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
+      "imgUrl": "1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Movie title 2",
+      "desc": "Movie 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
+      "imgUrl": "2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Movie title 3",
+      "desc": "Movie 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
+      "imgUrl": "3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Movie title 4",
+      "desc": "Movie 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
+      "imgUrl": "4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Movie title 5",
+      "desc": "Movie 5 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
+      "imgUrl": "5.jpg",
+      "isPopular": 1
+    }
+  ],
+  "categories":[
+    {
+      "id":1,"title":"Action"
+    },
+    {
+      "id":2,"title":"Comedy"
+    },
+    {
+      "id":3,"title":"Science-Fiction"
+    },
+    {
+      "id":4,"title":"Drama"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { MovieService } from './../services/movie.service';
+import { HttpClient } from '@angular/common/http';
 import { AlertifyService } from './../services/alertify.service';
 import { MovieRepository } from '../models/movieRepository';
 import { Component, OnInit } from '@angular/core';
@@ -6,26 +8,31 @@ import { Movie } from 'src/app/models/movie';
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.css']
+  styleUrls: ['./movies.component.css'],
+  providers: [MovieService,]
 })
 export class MoviesComponent implements OnInit {
-  movies: Movie[];
-  filteredMovies: Movie[];
-  popularMovies: Movie[];
-  movieRepository: MovieRepository;
+  movies: Movie[] = [];
+  filteredMovies: Movie[] = [];
+
   myMovieListTitle: string = "My Movie List";
   noneMovieTitle: string = "Movies not found";
   filterText: string = "";
 
 
-  constructor(private alertifyService: AlertifyService) {
-    this.movieRepository = new MovieRepository();
-    this.movies = this.movieRepository.getMovies();
-    this.popularMovies = this.movieRepository.getPopularMovies();
-    this.filteredMovies = this.movies;
+  constructor(private alertifyService: AlertifyService,
+    private httpClient: HttpClient) {
   }
 
   ngOnInit(): void {
+    this.httpClient.get<Movie[]>("http://localhost:3000/movies").subscribe(data => {
+      this.movies = data;
+      this.filteredMovies = this.movies;
+    });
+
+    this.httpClient.get("https://jsonplaceholder.typicode.com/users").subscribe(data => {
+      console.log(data);
+    });
   }
 
   onInputChange() {

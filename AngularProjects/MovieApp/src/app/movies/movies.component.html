@@ -12,7 +12,7 @@
     <small class="text-muted" *ngIf="filterText">Looking for {{filterText}}</small>
   </div>
 
-  <ng-template [ngTemplateOutlet]="myMovieFullList2" [ngTemplateOutletContext]="{movies: popularMovies}">
+  <ng-template [ngTemplateOutlet]="myMovieFullList2" [ngTemplateOutletContext]="{movies: movies}">
   </ng-template>
   <!-- <ng-template [ngTemplateOutlet]="myMovieFullList2"
     [ngTemplateOutletContext]="{movies: movieRepository.getPopularMovies()}">
@@ -34,8 +34,8 @@
       <div class="col-md-10">
         <div class="card-body">
           <h3 class="card-title">{{movie.title | uppercase}}</h3>
-          <p class="card-text">{{movie.releaseDate | date:'dd/MM/y'}}</p>
-          <p class="card-text">{{movie.desc | descSummary:50}}</p>
+          <!-- <p class="card-text">{{movie.releaseDate | date:'dd/MM/y'}}</p> -->
+          <p class="card-text">{{movie.desc | descSummary:30}}</p>
           <button class="btn btn-sm btn-outline-primary">Movie Details</button>
           <button (click)="addToList($event,movie)" class="btn btn-sm btn-outline-success ms-1">Add List</button>
 
