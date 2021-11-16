@@ -4,10 +4,10 @@ export class CategoryRepository {
 
   constructor() {
     this.categories = [
-      { id: 1, name: "Action" },
-      { id: 2, name: "Science-Fiction" },
-      { id: 3, name: "Drama" },
-      { id: 4, name: "Comedy" },
+      { id: 1, title: "Action" },
+      { id: 2, title: "Science-Fiction" },
+      { id: 3, title: "Drama" },
+      { id: 4, title: "Comedy" },
     ];
   }
 

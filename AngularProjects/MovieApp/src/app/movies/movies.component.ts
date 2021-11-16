@@ -20,17 +20,18 @@ export class MoviesComponent implements OnInit {
   filterText: string = "";
 
 
-  constructor(private alertifyService: AlertifyService,
-    private httpClient: HttpClient) {
-  }
+  constructor(
+    private alertifyService: AlertifyService,
+    private movieService: MovieService
+  ) { }
 
   ngOnInit(): void {
-    this.httpClient.get<Movie[]>("http://localhost:3000/movies").subscribe(data => {
+    this.movieService.getMovies().subscribe(data => {
       this.movies = data;
       this.filteredMovies = this.movies;
     });
 
-    this.httpClient.get("https://jsonplaceholder.typicode.com/users").subscribe(data => {
+    this.movieService.getMovies().subscribe(data => {
       console.log(data);
     });
   }
