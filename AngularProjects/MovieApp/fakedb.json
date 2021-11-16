@@ -4,32 +4,57 @@
       "id": 1,
       "title": "Movie title 1",
       "desc": "Movie 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
-      "imgUrl": "1.jpg"
+      "imgUrl": "1.jpg",
+      "categoryId":2
     },
     {
       "id": 2,
       "title": "Movie title 2",
       "desc": "Movie 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
-      "imgUrl": "2.jpg"
+      "imgUrl": "2.jpg",
+      "categoryId":3
     },
     {
       "id": 3,
       "title": "Movie title 3",
       "desc": "Movie 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
-      "imgUrl": "3.jpg"
+      "imgUrl": "3.jpg",
+      "categoryId":1
     },
     {
       "id": 4,
       "title": "Movie title 4",
       "desc": "Movie 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
-      "imgUrl": "4.jpg"
+      "imgUrl": "4.jpg",
+      "categoryId":4
     },
     {
       "id": 5,
       "title": "Movie title 5",
       "desc": "Movie 5 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
       "imgUrl": "5.jpg",
-      "isPopular": 1
+      "categoryId":1
+    },
+    {
+      "id": 6,
+      "title": "Movie title 6",
+      "desc": "Movie 6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
+      "imgUrl": "6.jpg",
+      "categoryId":3
+    },
+    {
+      "id": 7,
+      "title": "Movie title 7",
+      "desc": "Movie 7 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
+      "imgUrl": "7.jpg",
+      "categoryId":2
+    },
+    {
+      "id": 8,
+      "title": "Movie title 8",
+      "desc": "Movie 8 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
+      "imgUrl": "8.jpg",
+      "categoryId":4
     }
   ],
   "categories":[

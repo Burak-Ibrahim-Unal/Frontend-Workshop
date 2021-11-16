@@ -1,7 +1,6 @@
+import { ActivatedRoute } from '@angular/router';
 import { MovieService } from './../services/movie.service';
-import { HttpClient } from '@angular/common/http';
 import { AlertifyService } from './../services/alertify.service';
-import { MovieRepository } from '../models/movieRepository';
 import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 
@@ -23,19 +22,20 @@ export class MoviesComponent implements OnInit {
 
   constructor(
     private alertifyService: AlertifyService,
-    private movieService: MovieService
+    private movieService: MovieService,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.movieService.getMovies().subscribe(data => {
-      this.movies = data;
-      this.filteredMovies = this.movies;
-    });
-
-    this.movieService.getMovies().subscribe(data => {
-      console.log(data);
-    }, error => this.errorMessage = error);
+    this.activatedRoute.params.subscribe(params => {
+      this.movieService.getMovies(params["categoryId"]).subscribe(data => {
+        this.movies = data;
+        this.filteredMovies = this.movies;
+      }, error => this.errorMessage = error);
+      console.log(this.errorMessage);
+    })
   }
+
 
   onInputChange() {
     this.filteredMovies = this.filterText ? this.movies.filter(m => m.title.includes(this.filterText) || m.desc.includes(this.filterText)) : this.movies;

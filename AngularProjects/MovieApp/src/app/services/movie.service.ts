@@ -12,8 +12,12 @@ export class MovieService {
 
   }
 
-  getMovies(): Observable<Movie[]> {
-    return this.httpClient.get<Movie[]>(this.apiUrl).pipe(
+  getMovies(categoryId: number): Observable<Movie[]> {
+    let newApiUrl = this.apiUrl;
+    if (categoryId) {
+      newApiUrl += "?categoryId=" + categoryId;
+    }
+    return this.httpClient.get<Movie[]>(newApiUrl).pipe(
       tap(data => console.log(data)),
       catchError(this.handleError)
     );

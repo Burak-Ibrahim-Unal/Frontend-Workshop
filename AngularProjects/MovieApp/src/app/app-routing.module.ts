@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   { path: "movies", component: MoviesComponent },
   { path: "", redirectTo: "movies", pathMatch: "full" },
+  { path: "movies/category/:categoryId", component: MoviesComponent },
 ]
 
 @NgModule({
