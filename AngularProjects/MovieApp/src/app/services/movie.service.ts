@@ -20,6 +20,20 @@ export class MovieService {
   }
 
   private handleError(handleError: HttpErrorResponse) {
+    if (handleError.error instanceof ErrorEvent) {
+      console.log("Error: " + handleError.error.message);
+    } else {
+      switch (handleError.status) {
+        case 403:
+          console.log("Access denied");
+          break;
+        case 404:
+          console.log("Page is not found");
+          break;
+        default:
+          console.log("unknown error");
+      }
+    }
     return throwError("unknown error occured...");
   }
 }
