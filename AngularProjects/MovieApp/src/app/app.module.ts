@@ -14,6 +14,7 @@ import { DescSummaryPipe } from './Pipes/desc-summary.pipe';
 import { MovieFilterPipe } from './Pipes/movie-filter.pipe';
 import { AlertifyService } from './services/alertify.service';
 import { AppRoutingModule } from './app-routing.module';
+// import { RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // RouterModule
   ],
   providers: [
     AlertifyService
