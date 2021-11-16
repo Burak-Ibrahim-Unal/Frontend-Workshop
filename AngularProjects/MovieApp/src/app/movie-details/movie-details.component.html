@@ -1,1 +1,26 @@
-<p>movie-details works!</p>
+<div *ngIf="movie">
+  <div class="card border-primary mb-3">
+    <div class="row">
+      <div class="col-md-3 m-1">
+        <img src="../../assets/img/{{movie.imgUrl}}" class="img-fluid rounded-pill" alt="">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{movie.title}}</h2>
+          <p class="card-text"><span class="first-letter">{{movie.desc[0]}}</span>{{movie.desc.slice(1)}}</p>
+          <div class="card border-secondary" style="width: 18rem;">
+            <ul class="list-group list-group-flush 102border-danger">
+
+
+
+
+              <li class="list-group-item">Actor 1</li>
+              <li class="list-group-item">Actor 2</li>
+              <li class="list-group-item">Actor 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

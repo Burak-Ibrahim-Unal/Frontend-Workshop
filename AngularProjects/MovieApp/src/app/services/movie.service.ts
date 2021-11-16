@@ -23,6 +23,13 @@ export class MovieService {
     );
   }
 
+  getMovieById(movieId: number): Observable<Movie> {
+    return this.httpClient.get<Movie>(this.apiUrl + "/" + movieId).pipe(
+      tap(data => console.log(data)),
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(handleError: HttpErrorResponse) {
     if (handleError.error instanceof ErrorEvent) {
       console.log("Error: " + handleError.error.message);

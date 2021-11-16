@@ -40,9 +40,8 @@
           <h3 class="card-title">{{movie.title | uppercase}}</h3>
           <!-- <p class="card-text">{{movie.releaseDate | date:'dd/MM/y'}}</p> -->
           <p class="card-text">{{movie.desc | descSummary:30}}</p>
-          <button class="btn btn-sm btn-outline-primary">Movie Details</button>
+          <a routerLink="/movies/{{movie.id}}" class="btn btn-sm btn-outline-primary">Movie Details</a>
           <button (click)="addToList($event,movie)" class="btn btn-sm btn-outline-success ms-1">Add List</button>
-
         </div>
       </div>
     </div>
