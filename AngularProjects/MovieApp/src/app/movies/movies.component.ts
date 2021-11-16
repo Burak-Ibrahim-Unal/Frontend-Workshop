@@ -18,6 +18,7 @@ export class MoviesComponent implements OnInit {
   myMovieListTitle: string = "My Movie List";
   noneMovieTitle: string = "Movies not found";
   filterText: string = "";
+  errorMessage: any;
 
 
   constructor(
@@ -33,7 +34,7 @@ export class MoviesComponent implements OnInit {
 
     this.movieService.getMovies().subscribe(data => {
       console.log(data);
-    });
+    }, error => this.errorMessage = error);
   }
 
   onInputChange() {

@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { catchError, Observable, tap, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Movie } from '../models/movie';
 
@@ -13,6 +13,13 @@ export class MovieService {
   }
 
   getMovies(): Observable<Movie[]> {
-    return this.httpClient.get<Movie[]>(this.apiUrl);
+    return this.httpClient.get<Movie[]>(this.apiUrl).pipe(
+      tap(data => console.log(data)),
+      catchError(this.handleError)
+    );
+  }
+
+  private handleError(handleError: HttpErrorResponse) {
+    return throwError("unknown error occured...");
   }
 }

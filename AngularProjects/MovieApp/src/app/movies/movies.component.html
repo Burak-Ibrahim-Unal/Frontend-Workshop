@@ -1,3 +1,7 @@
+<div class="alert alert-danger" *ngIf="errorMessage">
+  {{errorMessage}}
+</div>
+
 <!-- <div *ngIf="movies.length>0; else no_Movies"> -->
 <div *ngIf="movies.length>0; else no_Movies">
   <h2>{{myMovieListTitle}}</h2>
