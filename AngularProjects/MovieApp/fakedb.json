@@ -5,56 +5,99 @@
       "title": "Movie title 1",
       "desc": "Movie 1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
       "imgUrl": "1.jpg",
-      "categoryId": 2
+      "isPopular": 0,
+      "categoryId": 2,
+      "releaseDate": 1537145316000
     },
     {
       "id": 2,
       "title": "Movie title 2",
       "desc": "Movie 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
       "imgUrl": "2.jpg",
-      "categoryId": 3
+      "isPopular": 0,
+      "categoryId": 3,
+      "releaseDate": 1633145316083
     },
     {
       "id": 3,
       "title": "Movie title 3",
       "desc": "Movie 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
       "imgUrl": "3.jpg",
-      "categoryId": 1
+      "isPopular": 0,
+      "categoryId": 1,
+      "releaseDate": 1635145316084
     },
     {
       "id": 4,
       "title": "Movie title 4",
       "desc": "Movie 4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
       "imgUrl": "4.jpg",
-      "categoryId": 4
+      "isPopular": 0,
+      "categoryId": 4,
+      "releaseDate": 1637125316085
     },
     {
       "id": 5,
       "title": "Movie title 5",
       "desc": "Movie 5 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni nu  sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni nu sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
       "imgUrl": "5.jpg",
-      "categoryId": 1
+      "isPopular": 0,
+      "categoryId": 1,
+      "releaseDate": 1637145136086
     },
     {
       "id": 6,
       "title": "Movie title 6",
       "desc": "Movie 6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi. sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni nu",
       "imgUrl": "6.jpg",
-      "categoryId": 3
+      "isPopular": 0,
+      "categoryId": 3,
+      "releaseDate": 1637145216087
     },
     {
       "id": 7,
       "title": "Movie title 7",
       "desc": "Movie 7 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni nu sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni nu sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni nu",
       "imgUrl": "7.jpg",
-      "categoryId": 2
+      "isPopular": 0,
+      "categoryId": 2,
+      "releaseDate": 1637145306088
     },
     {
       "id": 8,
       "title": "Movie title 8",
       "desc": "Movie 8 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dicta quidem velit beatae voluptate magni numquam cum quo nostrum animi.",
       "imgUrl": "8.jpg",
-      "categoryId": 4
+      "isPopular": 0,
+      "categoryId": 4,
+      "releaseDate": 1637145315011
+    },
+    {
+      "id": 9,
+      "title": "test 9",
+      "desc": "movie 9",
+      "imgUrl": "9.jpg",
+      "categoryId": "1",
+      "isPopular": false,
+      "releaseDate": 1637145316083
+    },
+    {
+      "id": 10,
+      "title": "movie test 10",
+      "desc": "movie test 10",
+      "imgUrl": "10.jpg",
+      "categoryId": "2",
+      "isPopular": false,
+      "releaseDate": 1637146173947
+    },
+    {
+      "id": 11,
+      "title": "test movie 11",
+      "desc": "test movie 11",
+      "imgUrl": "11.jpg",
+      "categoryId": "1",
+      "isPopular": false,
+      "releaseDate": 1637146346797
     }
   ],
   "categories": [

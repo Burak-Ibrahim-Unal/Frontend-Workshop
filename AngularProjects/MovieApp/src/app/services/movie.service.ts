@@ -12,15 +12,27 @@ export class MovieService {
 
   }
 
+  createMovie(movie: Movie): Observable<Movie> {
+    // const httpOptions = {
+    //   headers: new Headers({
+    //     'Content Type': 'application/json',
+    //     'Authorization': 'Token'
+    //   })
+    // }
+
+    return this.httpClient.post<Movie>(this.apiUrl, movie).pipe(
+      tap(data => console.log(data)),
+      catchError(this.handleError)
+    );
+
+  }
+
   getMovies(categoryId: number): Observable<Movie[]> {
     let newApiUrl = this.apiUrl;
     if (categoryId) {
       newApiUrl += "?categoryId=" + categoryId;
     }
-    return this.httpClient.get<Movie[]>(newApiUrl).pipe(
-      tap(data => console.log(data)),
-      catchError(this.handleError)
-    );
+    return this.httpClient.get<Movie[]>(newApiUrl);
   }
 
   getMovieById(movieId: number): Observable<Movie> {
