@@ -35,6 +35,13 @@ export class MovieCreateComponent implements OnInit {
       this.alertifyService.error("There are empty fields...");
       return;
     }
+
+    const imgExtensions = ["jpg", "jpeg", "png"];
+    if (imgExtensions.indexOf(img.value.split(".").pop()) === -1) {
+      this.alertifyService.error("Only jpg,jpeg,png formats allowed")
+      return;
+    }
+
     const movie = {
       id: 0,
       title: title.value,

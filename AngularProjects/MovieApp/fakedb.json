@@ -80,24 +80,6 @@
       "categoryId": "1",
       "isPopular": false,
       "releaseDate": 1637145316083
-    },
-    {
-      "id": 10,
-      "title": "movie test 10",
-      "desc": "movie test 10",
-      "imgUrl": "10.jpg",
-      "categoryId": "2",
-      "isPopular": false,
-      "releaseDate": 1637146173947
-    },
-    {
-      "id": 11,
-      "title": "test movie 11",
-      "desc": "test movie 11",
-      "imgUrl": "11.jpg",
-      "categoryId": "1",
-      "isPopular": false,
-      "releaseDate": 1637146346797
     }
   ],
   "categories": [
