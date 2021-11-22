@@ -16,6 +16,10 @@ const routes: Routes = [
     path: "cards",
     component: AboutComponent
   },
+  {
+    path: 'cards',
+    loadChildren: () => import('./card/card.module').then(m => m.CardModule)
+  },
 ];
 
 @NgModule({
