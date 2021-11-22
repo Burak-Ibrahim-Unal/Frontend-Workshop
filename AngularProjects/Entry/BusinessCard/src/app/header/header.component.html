@@ -1,3 +1,22 @@
 <header class="header">
-  <p>header works</p>
+  <p>
+    <mat-toolbar color="primary">
+      <span>Business Cards</span>
+      <span class="example-spacer"></span>
+      <ul class="header-menu">
+        <li>
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li>
+          <a routerLink="/cards" routerLinkActive="active">Cards</a>
+        </li>
+        <li>
+          <a routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+      </ul>
+      <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon class="me-auto">menu</mat-icon>
+      </button> -->
+    </mat-toolbar>
+  </p>
 </header>
