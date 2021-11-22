@@ -13,12 +13,8 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: "cards",
-    component: AboutComponent
-  },
-  {
     path: 'cards',
-    loadChildren: () => import('./card/card.module').then(m => m.CardModule)
+    loadChildren: () => import('./cards/cards.module').then(m => m.CardsModule)
   },
 ];
 
