@@ -7,7 +7,7 @@
       </p>
     </div>
     <div class="col-12 col-md-3 d-flex flex-row-reverse align-items-center m-4 p-3">
-      <button mat-flat-button color="primary">Add Card</button>
+      <button mat-flat-button color="primary" (click)="addCard()">Add Card</button>
     </div>
   </div>
 
@@ -15,6 +15,18 @@
 
   <div class="cards">
     <div class="row">
+      <div class="col-12 col-md-4 col-lg-4">
+        <app-card-item [card]="cardItem"></app-card-item>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4">
+        <app-card-item [card]="cardItem"></app-card-item>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4">
+        <app-card-item [card]="cardItem"></app-card-item>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4">
+        <app-card-item [card]="cardItem"></app-card-item>
+      </div>
       <div class="col-12 col-md-4 col-lg-4">
         <app-card-item [card]="cardItem"></app-card-item>
       </div>

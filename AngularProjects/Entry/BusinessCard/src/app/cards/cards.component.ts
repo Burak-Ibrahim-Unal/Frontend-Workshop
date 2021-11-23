@@ -1,3 +1,4 @@
+import { CardAddComponent } from './card-add/card-add.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -21,4 +22,9 @@ export class CardsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addCard(): void {
+    this.dialog.open(CardAddComponent, {
+      width: "500px"
+    });
+  }
 }

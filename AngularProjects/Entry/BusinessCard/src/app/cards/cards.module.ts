@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { CardItemComponent } from './card-item/card-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CardAddComponent } from './card-add/card-add.component';
 
 
 
@@ -14,7 +15,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     CardsComponent,
-    CardItemComponent
+    CardItemComponent,
+    CardAddComponent
   ],
   imports: [
     CommonModule,
