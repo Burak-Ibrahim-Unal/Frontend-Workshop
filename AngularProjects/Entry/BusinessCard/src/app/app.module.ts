@@ -31,7 +31,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     // MatIconModule,
     // MatButtonModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: "apiUrl",
+      useValue: "https://demo.limantech.com/cards/public/api/"
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

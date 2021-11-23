@@ -1,3 +1,5 @@
+import { Card } from './../models/card';
+import { CardService } from './../services/card.service';
 import { CardAddComponent } from './card-add/card-add.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -8,23 +10,27 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent implements OnInit {
-  cardItem = {
-    title: "FullStack .Net Developer",
-    name: "Burak İbrahim Ünal",
-    phone: "+905452100131",
-    email: "burakibrahim@gmail.com",
-    address: "Mamak/Ankara",
-  }
+  cards: Card[];
+
   constructor(
+    private cardService: CardService,
     public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
+    this.getCards();
   }
 
   addCard(): void {
     this.dialog.open(CardAddComponent, {
       width: "500px"
     });
+  }
+
+  getCards(): void {
+    this.cardService.getCards().subscribe(response => {
+      console.log(response);
+      this.cards = response;
+    })
   }
 }
