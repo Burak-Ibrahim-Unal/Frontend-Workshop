@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { CardItemComponent } from './card-item/card-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CardAddComponent } from './card-add/card-add.component';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 
@@ -24,6 +26,7 @@ import { CardAddComponent } from './card-add/card-add.component';
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
+    MatInputModule,
   ]
 })
 export class CardsModule { }
