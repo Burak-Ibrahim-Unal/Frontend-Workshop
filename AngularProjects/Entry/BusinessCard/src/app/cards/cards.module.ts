@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +10,8 @@ import { CardItemComponent } from './card-item/card-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CardAddComponent } from './card-add/card-add.component';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 
@@ -27,6 +30,9 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
   ]
 })
 export class CardsModule { }

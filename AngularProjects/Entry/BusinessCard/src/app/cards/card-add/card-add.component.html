@@ -1,29 +1,29 @@
 <h2 mat-dialog-title>Add Card</h2>
 <mat-dialog-content class="mat-typography">
-  <form>
+  <form [formGroup]="cardForm">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Title</mat-label>
-      <input matInput placeholder="Title">
+      <input matInput placeholder="Title" formControlName="title">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="Name">
+      <input matInput placeholder="Name" formControlName="name">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Email</mat-label>
-      <input matInput placeholder="Email">
+      <input matInput placeholder="Email" formControlName="email">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Address</mat-label>
-      <input matInput placeholder="Address">
+      <textarea matInput placeholder="Address" formControlName="address"></textarea>
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Phone</mat-label>
-      <input matInput placeholder="Phone">
+      <input matInput placeholder="Phone" formControlName="phone">
     </mat-form-field>
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Add</button>
+   <button mat-button  (click)="addCard()">Add</button> <!--[mat-dialog-close]="true"  close auto-->
 </mat-dialog-actions>
