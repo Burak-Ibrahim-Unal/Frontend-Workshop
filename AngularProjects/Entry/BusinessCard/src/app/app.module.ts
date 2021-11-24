@@ -34,7 +34,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   providers: [
     {
       provide: "apiUrl",
-      useValue: "https://demo.limantech.com/cards/public/api/"
+      useValue: "https://demo.limantech.com/cards/public/api"
     },
   ],
   bootstrap: [AppComponent]

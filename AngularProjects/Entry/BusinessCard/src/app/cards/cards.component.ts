@@ -27,13 +27,16 @@ export class CardsComponent implements OnInit {
       width: "500px"
     });
     dialogMessage.afterClosed().subscribe(res => {
-      console.log(res);
+      //console.log(res);
+      if (res) {
+        this.getCards();
+      }
     })
   }
 
   getCards(): void {
     this.cardService.getCards().subscribe(response => {
-      console.log(response);
+     // console.log(response);
       this.cards = response;
     })
   }

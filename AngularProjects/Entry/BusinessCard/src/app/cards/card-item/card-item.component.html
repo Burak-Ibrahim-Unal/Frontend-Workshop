@@ -1,5 +1,5 @@
 <mat-card class="card-item">
-  <mat-card-title-group>
+  <mat-card-title-group class="mat-card-header" (click)="openCardUpdate(card)">
     <mat-card-title>{{card.name || "-"}}</mat-card-title>
     <mat-card-subtitle>{{card.title}}</mat-card-subtitle>
     <img mat-card-lg-image

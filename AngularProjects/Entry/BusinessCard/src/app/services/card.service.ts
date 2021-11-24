@@ -14,10 +14,13 @@ export class CardService {
   ) { }
 
   getCards(): Observable<Card[]> {
-    return this.httpClient.get<Card[]>(this.apiUrl + "cards")
+    return this.httpClient.get<Card[]>(this.apiUrl + "/cards")
   }
 
-  addCard(card: Card) {
-    return this.httpClient.post(this.apiUrl, "cards" + card);
+  addCard(card: Card): Observable<any> {
+    return this.httpClient.post(this.apiUrl + "/cards", card);
+  }
+  updateCard(card: Card, cardId: number): Observable<any> {
+    return this.httpClient.put(this.apiUrl + "/cards/" + cardId, card);
   }
 }
