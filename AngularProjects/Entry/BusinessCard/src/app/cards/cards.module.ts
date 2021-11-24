@@ -11,6 +11,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CardAddComponent } from './card-add/card-add.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 
 
@@ -33,6 +35,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    MatProgressBarModule,
   ]
 })
 export class CardsModule { }

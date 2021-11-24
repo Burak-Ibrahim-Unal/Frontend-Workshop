@@ -14,6 +14,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class CardAddComponent implements OnInit {
   cardForm: FormGroup;
+  showSpinners: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -35,35 +36,41 @@ export class CardAddComponent implements OnInit {
   }
 
   addCard(): void {
-    console.log(this.cardForm.value);
+    //console.log(this.cardForm.value);
+    this.showSpinners = true;
     this.cardService.addCard(this.cardForm.value).subscribe((response: any) => {
       //console.log(response);
       this.snackBar.open(response || "Card added successfuly", "", {
         duration: 3000,
       });
       this.cardService.getCards();
+      this.showSpinners = false;
       this.dialogRef.close(true);
     });
   }
 
   updateCard(): void {
+    this.showSpinners = true;
     this.cardService.updateCard(this.cardForm.value, this.data.id).subscribe((response: any) => {
       //console.log(response);
       this.snackBar.open(response || "Card updated successfuly", "", {
         duration: 3000,
       });
       this.cardService.getCards();
+      this.showSpinners = false;
       this.dialogRef.close(true);
     });
   }
 
   deleteCard(): void {
+    this.showSpinners = true;
     this.cardService.deleteCard(this.data.id).subscribe((response: any) => {
       //console.log(response);
       this.snackBar.open(response || "Card deleted successfuly", "", {
         duration: 3000,
       });
       this.cardService.getCards();
+      this.showSpinners = false;
       this.dialogRef.close(true);
     });
   }
