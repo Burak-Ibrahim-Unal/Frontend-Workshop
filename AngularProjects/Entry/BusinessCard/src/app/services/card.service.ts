@@ -30,4 +30,7 @@ export class CardService {
   updateCard(card: Card, cardId: number): Observable<any> {
     return this.httpClient.put(this.apiUrl + "/cards/" + cardId, card);
   }
+  deleteCard(cardId: number): Observable<any> {
+    return this.httpClient.delete(this.apiUrl + "/cards/" + cardId);
+  }
 }

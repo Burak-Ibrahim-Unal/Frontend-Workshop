@@ -1,4 +1,3 @@
-import { Card } from './../models/card';
 import { CardService } from './../services/card.service';
 import { CardAddComponent } from './card-add/card-add.component';
 import { Component, OnInit } from '@angular/core';

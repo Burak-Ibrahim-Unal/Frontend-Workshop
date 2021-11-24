@@ -36,21 +36,34 @@ export class CardAddComponent implements OnInit {
 
   addCard(): void {
     console.log(this.cardForm.value);
-    this.cardService.addCard(this.cardForm.value).subscribe(response => {
+    this.cardService.addCard(this.cardForm.value).subscribe((response: any) => {
       //console.log(response);
-      this.snackBar.open(response.toString() || "Card added successfuly", "", {
+      this.snackBar.open(response || "Card added successfuly", "", {
         duration: 3000,
       });
+      this.cardService.getCards();
       this.dialogRef.close(true);
     });
   }
 
   updateCard(): void {
-    this.cardService.updateCard(this.cardForm.value, this.data.id).subscribe(response => {
+    this.cardService.updateCard(this.cardForm.value, this.data.id).subscribe((response: any) => {
       //console.log(response);
-      this.snackBar.open(response.toString() || "Card updated successfuly", "", {
+      this.snackBar.open(response || "Card updated successfuly", "", {
         duration: 3000,
       });
+      this.cardService.getCards();
+      this.dialogRef.close(true);
+    });
+  }
+
+  deleteCard(): void {
+    this.cardService.deleteCard(this.data.id).subscribe((response: any) => {
+      //console.log(response);
+      this.snackBar.open(response || "Card deleted successfuly", "", {
+        duration: 3000,
+      });
+      this.cardService.getCards();
       this.dialogRef.close(true);
     });
   }
