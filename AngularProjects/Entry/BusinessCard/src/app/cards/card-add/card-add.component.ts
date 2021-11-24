@@ -40,12 +40,7 @@ export class CardAddComponent implements OnInit {
     this.showSpinners = true;
     this.cardService.addCard(this.cardForm.value).subscribe((response: any) => {
       //console.log(response);
-      this.snackBar.open(response || "Card added successfuly", "", {
-        duration: 3000,
-      });
-      this.cardService.getCards();
-      this.showSpinners = false;
-      this.dialogRef.close(true);
+      this.getResult(response || "Card deleted added");
     });
   }
 
@@ -53,12 +48,7 @@ export class CardAddComponent implements OnInit {
     this.showSpinners = true;
     this.cardService.updateCard(this.cardForm.value, this.data.id).subscribe((response: any) => {
       //console.log(response);
-      this.snackBar.open(response || "Card updated successfuly", "", {
-        duration: 3000,
-      });
-      this.cardService.getCards();
-      this.showSpinners = false;
-      this.dialogRef.close(true);
+      this.getResult(response || "Card updated successfuly");
     });
   }
 
@@ -66,13 +56,16 @@ export class CardAddComponent implements OnInit {
     this.showSpinners = true;
     this.cardService.deleteCard(this.data.id).subscribe((response: any) => {
       //console.log(response);
-      this.snackBar.open(response || "Card deleted successfuly", "", {
-        duration: 3000,
-      });
-      this.cardService.getCards();
-      this.showSpinners = false;
-      this.dialogRef.close(true);
+      this.getResult(response || "Card deleted successfuly");
     });
   }
 
+  getResult(response: any): void {
+    this.snackBar.open(response, "", {
+      duration: 3000,
+    });
+    this.cardService.getCards();
+    this.showSpinners = false;
+    this.dialogRef.close(true);
+  }
 }
