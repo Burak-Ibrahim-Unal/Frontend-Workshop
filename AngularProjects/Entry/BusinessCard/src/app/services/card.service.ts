@@ -7,14 +7,21 @@ import { Card } from '../models/card';
   providedIn: 'root'
 })
 export class CardService {
+  cards!: Card[];
 
   constructor(
     @Inject("apiUrl") private apiUrl: string,
     private httpClient: HttpClient,
   ) { }
 
-  getCards(): Observable<Card[]> {
-    return this.httpClient.get<Card[]>(this.apiUrl + "/cards")
+  // getCards(): Observable<Card[]> {
+  //   return this.httpClient.get<Card[]>(this.apiUrl + "/cards")
+  // }
+  getCards(): void {
+    this.httpClient.get<Card[]>(this.apiUrl + "/cards")
+      .subscribe((response: Card[]) => {
+        this.cards = response;
+      });
   }
 
   addCard(card: Card): Observable<any> {
