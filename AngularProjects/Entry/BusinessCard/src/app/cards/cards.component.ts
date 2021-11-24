@@ -14,7 +14,8 @@ export class CardsComponent implements OnInit {
 
   constructor(
     private cardService: CardService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+
   ) { }
 
   ngOnInit(): void {
@@ -22,9 +23,12 @@ export class CardsComponent implements OnInit {
   }
 
   addCard(): void {
-    this.dialog.open(CardAddComponent, {
+    const dialogMessage = this.dialog.open(CardAddComponent, {
       width: "500px"
     });
+    dialogMessage.afterClosed().subscribe(res => {
+      console.log(res);
+    })
   }
 
   getCards(): void {
