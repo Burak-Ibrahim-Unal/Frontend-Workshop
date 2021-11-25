@@ -1,3 +1,4 @@
+import { SnackbarService } from './../../services/snackbar.service';
 import { Card } from './../../models/card';
 import { CardService } from './../../services/card.service';
 import { Validators } from '@angular/forms';
@@ -21,6 +22,7 @@ export class CardAddComponent implements OnInit {
     private cardService: CardService,
     private dialogRef: MatDialogRef<CardAddComponent>,
     private snackBar: MatSnackBar,
+    private snackbarService: SnackbarService,
     @Inject(MAT_DIALOG_DATA) public data: Card
   ) { }
 
@@ -36,36 +38,44 @@ export class CardAddComponent implements OnInit {
   }
 
   addCard(): void {
-    //console.log(this.cardForm.value);
     this.showSpinners = true;
     this.cardService.addCard(this.cardForm.value).subscribe((response: any) => {
-      //console.log(response);
-      this.getResult(response || "Card deleted added");
-    });
+      this.getSuccessResult(response || "Card deleted added");
+    }, (error => {
+      this.getErrorResult(error.message || "Unknown error occured...");
+    }));
   }
 
   updateCard(): void {
     this.showSpinners = true;
     this.cardService.updateCard(this.cardForm.value, this.data.id).subscribe((response: any) => {
       //console.log(response);
-      this.getResult(response || "Card updated successfuly");
-    });
+      this.getSuccessResult(response || "Card updated successfuly");
+    }, (error => {
+      this.getErrorResult(error.message || "Unknown error occured...");
+    }));
   }
 
   deleteCard(): void {
     this.showSpinners = true;
     this.cardService.deleteCard(this.data.id).subscribe((response: any) => {
       //console.log(response);
-      this.getResult(response || "Card deleted successfuly");
-    });
+      this.getSuccessResult(response || "Card deleted successfuly");
+    }, (error => {
+      this.getErrorResult(error.message || "Unknown error occured...");
+    }));
   }
 
-  getResult(response: any): void {
-    this.snackBar.open(response, "", {
-      duration: 3000,
-    });
+  getSuccessResult(response: any): void {
+    this.snackbarService.createSnackBar("success",response);
     this.cardService.getCards();
     this.showSpinners = false;
     this.dialogRef.close(true);
+  }
+
+  getErrorResult(response: any): void {
+    this.snackbarService.createSnackBar("error",response, 4000);
+
+    this.showSpinners = false;
   }
 }

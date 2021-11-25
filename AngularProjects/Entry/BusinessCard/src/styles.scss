@@ -13,3 +13,13 @@ main{
     color: darkblue
   }
 }
+
+.mat-snack-bar-container{
+  color: white;
+  &.success{
+    background-color: green;
+  }
+  &.error{
+    background-color: red;
+  }
+}

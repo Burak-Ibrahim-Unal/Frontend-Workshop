@@ -10,7 +10,6 @@ import { CardItemComponent } from './card-item/card-item.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CardAddComponent } from './card-add/card-add.component';
 import { MatInputModule } from '@angular/material/input';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
@@ -34,7 +33,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule,
     MatProgressBarModule,
   ]
 })
