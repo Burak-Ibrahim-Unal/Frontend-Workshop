@@ -51,17 +51,34 @@ const page = (
 
 const page2 = (
   <div>
-      <img src="./react-logo.png" width="80px"/>
-      <h1>New tests...</h1>
-      <ul>
-          <li>fact 1</li>
-          <li>fact 2</li>
-          <li>fact 3</li>
-          <li>fact 4</li>
-          <li>fact 5</li>
-      </ul>
+    <img src="./react-logo.png" width="80px" />
+    <h1>New tests...</h1>
+    <ul>
+      <li>fact 1</li>
+      <li>fact 2</li>
+      <li>fact 3</li>
+      <li>fact 4</li>
+      <li>fact 5</li>
+    </ul>
   </div>
 );
 
+function Page3() { //for a function,we can use camel case
+  return (
+    <div>
+      <img src="./react-logo.png" width="80px" />
+      <h1>New tests...</h1>
+      <ul>
+        <li>fact 1</li>
+        <li>fact 2</li>
+        <li>fact 3</li>
+        <li>fact 4</li>
+        <li>fact 5</li>
+      </ul>
+    </div>
+  )
+}
 
-ReactDOM.render(page2, document.getElementById("root")); // document.querySelector("#root")
+// ReactDOM.render(page2, document.getElementById("root")); // document.querySelector("#root")
+// ReactDOM.render(page3(), document.getElementById("root")); // document.querySelector("#root")
+ReactDOM.render(<Page3 />, document.getElementById("root")); // document.querySelector("#root")
