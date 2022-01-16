@@ -36,6 +36,18 @@ const navbar = (
   </nav>
 );
 
-console.log(navbar);
+const page = (
+  <div>
+    <h1>React Web Site</h1>
+    <p>Test paragraph within 1 nav parent element</p>
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ol>
+  </div>
+);
 
-ReactDOM.render(navbar, document.getElementById("root")); // document.querySelector("#root")
+
+ReactDOM.render(page, document.getElementById("root")); // document.querySelector("#root")
