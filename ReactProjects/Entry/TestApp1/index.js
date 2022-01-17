@@ -63,7 +63,8 @@ const page2 = (
   </div>
 );
 
-function Page3() { //for a function,we can use camel case
+function Page3() { //for a function,we can use camel case , for usage <Page3 />, use capital chars
+  
   return (
     <div>
       <img src="./react-logo.png" width="80px" />
@@ -79,6 +80,26 @@ function Page3() { //for a function,we can use camel case
   )
 }
 
+
+const Page4= (
+  <div>
+    <header>
+      <nav>
+        <img src="./react-logo.png" width="60px"/>
+      </nav>
+    </header>
+    <h1>Test header</h1>
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ol>
+    <footer> © 2022 copyright by Burak</footer> { /* © = alt + 169 */}
+  </div>
+)
+
 // ReactDOM.render(page2, document.getElementById("root")); // document.querySelector("#root")
 // ReactDOM.render(page3(), document.getElementById("root")); // document.querySelector("#root")
-ReactDOM.render(<Page3 />, document.getElementById("root")); // document.querySelector("#root")
+// ReactDOM.render(<Page3 />, document.getElementById("root")); // document.querySelector("#root")
+ReactDOM.render(Page4, document.getElementById("root")); // document.querySelector("#root")
