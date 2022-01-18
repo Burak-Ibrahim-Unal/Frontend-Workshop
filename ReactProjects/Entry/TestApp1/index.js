@@ -81,7 +81,7 @@ function Page3() {
   );
 }
 
-function header() {
+function Header() {
   return (
     <header>
       <nav>
@@ -91,19 +91,18 @@ function header() {
   );
 }
 
-function footer() {
+function Footer() {
   return (
     <footer>
-      {" "}
       <strong>©2022 Copyright </strong>by Burak
     </footer>
   );
 }
 
-function Page4() {
+function MainContent() {
   return (
     <div>
-      <header />
+      <Header />
       <h1>Test header</h1>
       <ol>
         <li>Item 1</li>
@@ -111,10 +110,14 @@ function Page4() {
         <li>Item 3</li>
         <li>Item 4</li>
       </ol>
-      <footer />
+      <Footer />
       {/* © = alt + 0169 */}
     </div>
   );
+}
+
+function Page4() {
+  return <MainContent />;
 }
 
 // ReactDOM.render(page2, document.getElementById("root")); // document.querySelector("#root")
