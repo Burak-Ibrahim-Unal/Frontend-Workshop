@@ -24,6 +24,7 @@
 // const newh1 = <h1 className="header">JXS File</h1>;
 // console.log(newh1);
 
+
 const navbar = (
   <nav>
     <h1>React Web Site</h1>
@@ -81,11 +82,18 @@ function Page3() {
   );
 }
 
+
+
 function Header() {
   return (
     <header>
-      <nav>
+      <nav className="nav">
         <img src="./react-logo.png" width="60px" />
+        <ul className="navMenuItems">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
       </nav>
     </header>
   );

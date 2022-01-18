@@ -1,4 +1,14 @@
-html,body {
-    margin: 0;
-    padding: 0;
+.navMenuItems{
+    list-style: none;
+    display: flex;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navMenuItems > li {
+    padding: 10px;
 }
