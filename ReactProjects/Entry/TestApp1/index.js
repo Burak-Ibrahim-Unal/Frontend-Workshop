@@ -81,14 +81,29 @@ function Page3() {
   );
 }
 
+function header() {
+  return (
+    <header>
+      <nav>
+        <img src="./react-logo.png" width="60px" />
+      </nav>
+    </header>
+  );
+}
+
+function footer() {
+  return (
+    <footer>
+      {" "}
+      <strong>©2022 Copyright </strong>by Burak
+    </footer>
+  );
+}
+
 function Page4() {
   return (
     <div>
-      <header>
-        <nav>
-          <img src="./react-logo.png" width="60px" />
-        </nav>
-      </header>
+      <header />
       <h1>Test header</h1>
       <ol>
         <li>Item 1</li>
@@ -96,7 +111,8 @@ function Page4() {
         <li>Item 3</li>
         <li>Item 4</li>
       </ol>
-      <footer> © 2022 copyright by Burak</footer> {/* © = alt + 0169 */}
+      <footer />
+      {/* © = alt + 0169 */}
     </div>
   );
 }
