@@ -102,7 +102,6 @@ function Footer() {
 function MainContent() {
   return (
     <div>
-      <Header />
       <h1>Test header</h1>
       <ol>
         <li>Item 1</li>
@@ -110,14 +109,19 @@ function MainContent() {
         <li>Item 3</li>
         <li>Item 4</li>
       </ol>
-      <Footer />
       {/* © = alt + 0169 */}
     </div>
   );
 }
 
 function Page4() {
-  return <MainContent />;
+  return (
+    <div>
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  );
 }
 
 // ReactDOM.render(page2, document.getElementById("root")); // document.querySelector("#root")
