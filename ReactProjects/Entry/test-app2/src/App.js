@@ -1,25 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './react-logo.png'
 
-function App() {
+
+function Header() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <header>
+      <nav className="nav">
+        <img src={logo} width='60px' alt='react-logo'/>
+        <ul className="navMenuItems">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer>
+      <strong>©2022 Copyright </strong>by Burak
+    </footer>
+  );
+}
+
+function MainContent() {
+  return (
+    <div>
+      <h1>Test header</h1>
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ol>
+      {/* © = alt + 0169 */}
     </div>
   );
 }
 
-export default App;
+function Page4() {
+  return (
+    <div>
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  );
+}
+
+export default Page4;
