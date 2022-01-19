@@ -6,7 +6,7 @@ function Header() {
   return (
     <header>
       <nav className="nav">
-        <img src={logo} width='60px' alt='react-logo'/>
+        <img className='navLogo' src={logo} alt='react-logo'/>
         <ul className="navMenuItems">
           <li>Pricing</li>
           <li>About</li>
@@ -19,7 +19,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer>
+    <footer className='footer'>
       <strong>©2022 Copyright </strong>by Burak
     </footer>
   );
