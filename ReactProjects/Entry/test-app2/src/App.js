@@ -3,7 +3,7 @@ import Header from "./Header";
 import MainContent from "./MainContent";
 import Footer from "./Footer";
 
-function Page4() {
+function App() {
   return (
     <div>
       <Header />
@@ -13,4 +13,4 @@ function Page4() {
   );
 }
 
-export default Page4;
+export default App;
