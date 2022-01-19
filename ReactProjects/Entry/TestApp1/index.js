@@ -1,3 +1,5 @@
+
+
 // ReactDOM.render(<p>Paragraph from js file</p>,document.getElementById("root")); // document.querySelector("#root")
 // ReactDOM.render(<ul><li>li 1</li><li>li 2</li></ul>,document.getElementById("root"));
 // ReactDOM.render(<h1 className="Test">Paragraph from js file</h1>,document.getElementById("root")); // document.querySelector("#root")
@@ -23,7 +25,6 @@
 
 // const newh1 = <h1 className="header">JXS File</h1>;
 // console.log(newh1);
-
 
 const navbar = (
   <nav>
@@ -81,8 +82,6 @@ function Page3() {
     </div>
   );
 }
-
-
 
 function Header() {
   return (
