@@ -1,3 +1,6 @@
+/* Google fonts for all pages start */
+
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 .fontInter400 {
@@ -19,10 +22,25 @@
   box-sizing: border-box;
 }
 
+/* Google fonts for all pages end */
+
+
+
+/* This is for all html pages start */
+
 body {
   margin: 0;
-  font-family: inter;
+  font-family: ;
+
+  height: 100vh; /* vh = view height  */
+  background-color: #535346;
 }
+
+/* This is for all html pages end */
+
+
+
+/* Navbar start */
 
 .navLogo {
   width: 50px;
@@ -54,3 +72,49 @@ nav {
   font-size: 25px;
   color: #99c7d4;
 }
+
+/* Navbar end */
+
+
+
+
+/* Main Page start */
+
+main{
+  padding: 20px 15px;
+  color: white;
+}
+
+
+.mainH1{
+  margin-left: 10px;
+  font-size: 35px;
+  letter-spacing: -0.05em;
+}
+
+
+.ulMain {
+  list-style: none; /* Remove default bullets */
+  margin-top: 30px;
+  max-width: 500px;
+  
+}
+
+.ulMain li::before { 
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #99c7d4; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.ulMain > li {
+  line-height: 20px;
+  padding-block: 5px; /* this makes padding horizontal */
+}
+
+
+
+
+/* Main Page start */
