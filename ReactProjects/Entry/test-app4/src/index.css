@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+}
+/* font-family: 'Rubik Beastly', cursive; */
+
+/* Nav Start */
+nav {
+  background-color: rgb(92, 241, 241);
+  display: flex;
+  padding: 10px;
+  box-shadow: 2px 3px 10px rgba(0,0,0,0.4);
+}
+
+.navImage {
+  max-width: 80px;
+  margin: 5px 20px;
+  
+}
+
+/* Nav End */
