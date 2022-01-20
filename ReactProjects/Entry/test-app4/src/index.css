@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -5,21 +7,63 @@
 body {
   margin: 0;
   background-color: white;
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 1.3rem;
 }
-/* font-family: 'Rubik Beastly', cursive; */
+
+/*
+
+font-family: 'Neonderthaw', cursive;
+font-family: 'Rubik Beastly', cursive;
+
+*/
 
 /* Nav Start */
 nav {
   background-color: rgb(92, 241, 241);
   display: flex;
   padding: 10px;
-  box-shadow: 2px 3px 10px rgba(0,0,0,0.4);
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .navImage {
   max-width: 80px;
   margin: 5px 20px;
-  
 }
 
 /* Nav End */
+
+/* Hero content start */
+section {
+  padding: 20px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroImg {
+  max-width: 1000px;
+  align-self: center;
+}
+
+.heroHeader{
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.heroMainText{
+  margin: 10px;
+  line-height: 25px;
+}
+
+.heroParagraphSpace{
+  margin: 20px;
+}
+
+.heroCapitalL{
+  font-weight: bold;
+  font-size: 36px;
+}
+/* Hero content end */
