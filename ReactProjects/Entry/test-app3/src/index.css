@@ -30,8 +30,6 @@
 
 body {
   margin: 0;
-  font-family: ;
-
   height: 100vh; /* vh = view height  */
   background-color: #535346;
 }
@@ -82,7 +80,10 @@ nav {
 
 main{
   padding: 20px 15px;
-  color: white;
+  background: url("./images/react-logo.png"),white;
+  background-repeat: no-repeat;
+  background-position: right 80%; /* right horizontal , 80% vertical */
+  background-size: 300px;
 }
 
 
@@ -93,25 +94,22 @@ main{
 }
 
 
-.ulMain {
-  list-style: none; /* Remove default bullets */
+.ulMain {/* Remove default bullets */
   margin-top: 30px;
   max-width: 500px;
   
 }
 
-.ulMain li::before { 
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #99c7d4; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
+
+
+.ulMain li::marker {
+  color: yellow;
+  font-size: 1.3em;
 }
 
 .ulMain > li {
   line-height: 20px;
-  padding-block: 5px; /* this makes padding horizontal */
+  padding-block: 5px; /* this makes padding vertical */
 }
 
 
