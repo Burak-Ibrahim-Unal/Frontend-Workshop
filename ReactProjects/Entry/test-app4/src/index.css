@@ -11,6 +11,15 @@ body {
   font-size: 1.3rem;
 }
 
+
+.grayText{
+  color: rgb(190, 190, 190);
+}
+
+.bold{
+  font-weight: bold;
+}
+
 /*
 
 font-family: 'Neonderthaw', cursive;
@@ -66,4 +75,38 @@ section {
   font-weight: bold;
   font-size: 36px;
 }
+
 /* Hero content end */
+
+/* card content start */
+.card{
+  width: 200px;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.cardImage {
+  width: 100%;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.cardStats{
+  display: flex;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.card-star{
+  height: 20px;
+}
+
+
+
+
+
+/* card content end */
