@@ -4,7 +4,6 @@ import star1 from "../images/star1.jpg";
 
 
 export default function Card(props) {
-    console.log(props.img);
     return (
         <div className="card">
             <img className="cardImage" src={props.img} alt="boy1" />
