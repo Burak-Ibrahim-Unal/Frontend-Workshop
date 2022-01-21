@@ -4,19 +4,38 @@ import mail1 from "../images/main-icon.png";
 import "../index.css";
 
 
-export default function Contact(props) {
-    console.log(props);
+//V1
+// export default function Contact(props) {
+//     console.log(props);
+//     return (
+//         <div className="contact-card">
+//             <img src={props.src} alt="cat" />
+//             <h3> {props.name}</h3>
+//             <div className="contact-info">
+//                 <img src={phone1} alt="phone" />
+//                 <p> {props.phone}</p>
+//             </div>
+//             <div className="contact-info">
+//                 <img src={mail1} alt="" />
+//                 <p> {props.mail}</p>
+//             </div>
+//         </div>
+//     )
+// }
+
+
+export default function Contact({src, name, phone, mail}) {
     return (
         <div className="contact-card">
-            <img src={props.src} alt="cat" />
-            <h3> {props.name}</h3>
+            <img src={src} alt="cat" />
+            <h3> {name}</h3>
             <div className="contact-info">
                 <img src={phone1} alt="phone" />
-                <p> {props.phone}</p>
+                <p> {phone}</p>
             </div>
             <div className="contact-info">
                 <img src={mail1} alt="" />
-                <p> {props.mail}</p>
+                <p> {mail}</p>
             </div>
         </div>
     )
