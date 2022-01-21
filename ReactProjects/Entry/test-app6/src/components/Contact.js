@@ -4,7 +4,7 @@ import mail1 from "../images/main-icon.png";
 import "../index.css";
 
 
-//V1
+// //V1
 // export default function Contact(props) {
 //     console.log(props);
 //     return (
