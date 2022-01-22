@@ -10,6 +10,7 @@ export default function App() {
         return (
             <div key={keyValue++}>
                 <Card
+                    key={card.id}               
                     img={card.cover}
                     rating={card.stats.rating}
                     reviewCount={card.stats.review}
