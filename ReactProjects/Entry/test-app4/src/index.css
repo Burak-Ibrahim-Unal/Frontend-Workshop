@@ -83,6 +83,10 @@ section {
   width: 200px;
   font-size: 18px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  position: relative;
 }
 
 
@@ -93,6 +97,7 @@ section {
   -moz-border-radius: 16px;
   -ms-border-radius: 16px;
   -o-border-radius: 16px;
+  margin-bottom: 10px;
 }
 
 .cardStats{
@@ -105,8 +110,23 @@ section {
   height: 20px;
 }
 
+.cardPrice{
+  margin-top: auto;
+}
 
-
+.cardBadge{
+  position: absolute;
+  padding: 6px;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  font-weight: bold;
+}
 
 
 /* card content end */

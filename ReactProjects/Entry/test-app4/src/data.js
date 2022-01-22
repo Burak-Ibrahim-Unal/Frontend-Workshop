@@ -26,7 +26,7 @@ export default[
             review:33,
         },
         location:"Turkey",
-        spots:3
+        spots:0
     },
     {
         id:3,

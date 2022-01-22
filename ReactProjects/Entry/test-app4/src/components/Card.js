@@ -6,6 +6,7 @@ export default function Card(props) {
     console.log(props);
      return (
         <div className="card">
+            {props.spots === 0 && <div className="cardBadge"> Sold Out</div>}
             <img className="cardImage" src={props.img} alt={props.img} />
             <div className="cardStats">
                 <img className="card-star" src={star1} alt="star" />

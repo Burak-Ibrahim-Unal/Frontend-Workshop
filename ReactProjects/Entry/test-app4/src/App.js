@@ -18,6 +18,7 @@ export default function App() {
                     title={card.title}
                     price={card.price}
                     description={card.description}
+                    spots={card.spots}
                 />
             </div>
         );
