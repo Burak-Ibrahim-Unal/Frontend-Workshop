@@ -20,7 +20,7 @@ export default[
         title:"title2",
         description:"description3",
         price:140,
-        image:"../images/boy2.jpg",
+        cover:"../images/boy2.jpg",
         stats:{
             rating:6.0,
             review:33,
@@ -33,7 +33,7 @@ export default[
         title:"title3",
         description:"description3",
         price:200,
-        image:"../images/boy3.jpg",
+        cover:"../images/boy3.jpg",
         stats:{
             rating:8.0,
             review:12,
@@ -46,7 +46,7 @@ export default[
         title:"title4",
         description:"description4",
         price:66,
-        image:"../images/boy4.jpg",
+        cover:"../images/boy4.jpg",
         stats:{
             rating:8.3,
             review:8,

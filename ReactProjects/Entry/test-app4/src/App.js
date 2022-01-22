@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar"
 import Hero from "./components/Hero";
 import Card from "./components/Card";
 import data from "./data";
@@ -10,7 +10,7 @@ export default function App() {
         return (
             <div key={keyValue++}>
                 <Card
-                    key={card.id}               
+                    key={card.id}
                     img={card.cover}
                     rating={card.stats.rating}
                     reviewCount={card.stats.review}
