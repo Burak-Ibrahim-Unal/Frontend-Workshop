@@ -2,22 +2,31 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-import boy1 from "./images/boy1.jpg";
-
+import data from "./data";
 
 export default function App() {
+    let keyValue=1;
+    const cards = data.map((card) => {
+        return (
+            <div key={keyValue++}>
+                <Card
+                    img={card.cover}
+                    rating={card.stats.rating}
+                    reviewCount={card.stats.review}
+                    country={card.location}
+                    title={card.title}
+                    price={card.price}
+                    description={card.description}
+                />
+            </div>
+        );
+    });
+
     return (
         <div>
             <Navbar />
             {/* <Hero /> */}
-            <Card 
-                img={boy1}
-                rating="4.9"
-                reviewCount={6}
-                country="Turkey" 
-                title="Little Boys at Arena"
-                price={40}
-            />
+            {cards}
         </div>
-    );
+    )
 }
