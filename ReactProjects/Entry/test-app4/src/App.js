@@ -7,6 +7,7 @@ import data from "./data";
 export default function App() {
     let keyValue=1;
     const cards = data.map((card) => {
+        console.log(card.cover)
         return (
             <div key={keyValue++}>
                 <Card
@@ -19,6 +20,7 @@ export default function App() {
                     price={card.price}
                     description={card.description}
                     spots={card.spots}
+                    location={card.location}
                 />
             </div>
         );
