@@ -24,7 +24,7 @@
 }
 
 .input__box:focus {
-  box-shadow: inset 0 0 10px 1000px rgb(79, 87, 155);
+  box-shadow: inset 0 0 10px 1000px rgb(12, 181, 184);
   outline: none;
   color: white;
 }
@@ -51,4 +51,22 @@
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 
+}
+
+.input__submit:hover{
+    background-color: rgb(12, 181, 184)
+}
+
+.input__submit:active{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    box-shadow: 0 0 15px black;
+}
+
+
+::placeholder{
+    color: black;
 }
