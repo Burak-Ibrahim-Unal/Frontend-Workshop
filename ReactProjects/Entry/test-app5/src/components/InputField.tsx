@@ -5,12 +5,13 @@ import "./InputField.css";
 interface todoProps {
     todo: string;
     setTodo: React.Dispatch<React.SetStateAction<string>>;
+    handleAdd: (e: React.FormEvent) => void;
 }
 
-const InputField: React.FC<todoProps> = ({ todo, setTodo }) => {
+const InputField: React.FC<todoProps> = ({ todo, setTodo, handleAdd }) => {
     return (
         <div>
-            <form className='input'>
+            <form className='input' onSubmit={handleAdd}>
                 <input
                     type="text"
                     className='input__box'
