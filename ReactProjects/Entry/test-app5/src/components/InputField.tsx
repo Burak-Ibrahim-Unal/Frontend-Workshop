@@ -11,7 +11,7 @@ interface todoProps {
 const InputField: React.FC<todoProps> = ({ todo, setTodo, handleAdd }) => {
     return (
         <div>
-            <form className='input' onSubmit={handleAdd}>
+            <form className='input' onSubmit={(e) => handleAdd(e)}>
                 <input
                     type="text"
                     className='input__box'
