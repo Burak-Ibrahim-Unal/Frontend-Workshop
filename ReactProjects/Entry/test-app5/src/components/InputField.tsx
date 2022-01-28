@@ -1,4 +1,4 @@
-import React from 'react'; //rafce
+import React, { useRef } from 'react'; //rafce
 import "./InputField.css";
 
 
@@ -9,10 +9,16 @@ interface todoProps {
 }
 
 const InputField: React.FC<todoProps> = ({ todo, setTodo, handleAdd }) => {
+    const inputRef = useRef<HTMLInputElement>(null);
+
     return (
         <div>
-            <form className='input' onSubmit={(e) => handleAdd(e)}>
+            <form className='input' onSubmit={(e) => {
+                handleAdd(e);
+                inputRef.current?.blur();
+            }}>
                 <input
+                    ref={inputRef}
                     type="text"
                     className='input__box'
                     placeholder='Enter a Task'
